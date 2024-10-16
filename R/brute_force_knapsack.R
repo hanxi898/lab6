@@ -33,7 +33,7 @@ knapsack_objects <- generate_knapsack_objects(2000)
 
 print(knapsack_objects)
 
-brute_force_knapsack <- function(x, W) {
+brute_force_knapsack <- function(x, W, parallel = TRUE) {
   if (!is.data.frame(x) || !all(c("v", "w") %in% names(x))) {
     stop("False")
   }
@@ -64,4 +64,4 @@ brute_force_knapsack <- function(x, W) {
   ))
 }
 
-brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500)
+brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500,parallel = TRUE)

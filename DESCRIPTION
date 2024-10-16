@@ -6,7 +6,7 @@ Maintainer: Can Wang <canwa869@student.liu.se>, Han Xia <hanxi898@student.liu.se
 Description: I like the package
 License: GPL-3
 Encoding: UTF-8
-Imports: testthat
+Imports: testthat,future.apply,future
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3

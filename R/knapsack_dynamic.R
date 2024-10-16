@@ -1,3 +1,22 @@
+#' Dynamic Programming Knapsack Solver
+#'
+#' This function solves the knapsack problem using dynamic programming.
+#' It computes the optimal value and selected items for a given weight limit.
+#'
+#' @param x A data frame with two columns: `w` for item weights and `v` for item values.
+#' @param W An integer representing the maximum weight capacity of the knapsack.
+#'
+#' @return A list with two components:
+#' \itemize{
+#'   \item `value`: The maximum value of items that can be carried without exceeding the weight.
+#'   \item `elements`: A vector of indices representing the selected items.
+#' }
+#'
+#' @examples
+#' knapsack_objects <- generate_knapsack_objects(500)
+#' knapsack_dynamic(knapsack_objects, W = 3500)
+#' @name knapsack_dynamic
+#' @export
 RNGkind("Mersenne-Twister")  
 set.seed(42)
 

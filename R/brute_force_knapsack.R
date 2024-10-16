@@ -1,3 +1,23 @@
+#' Brute Force Knapsack Solver
+#'
+#' This function solves the knapsack problem using a brute force approach.
+#' It checks all possible combinations of items and returns the one with the highest value
+#' without exceeding the weight limit.
+#'
+#' @param x A data frame with two columns: `w` for item weights and `v` for item values.
+#' @param W An integer representing the maximum weight capacity of the knapsack.
+#'
+#' @return A list with two components:
+#' \itemize{
+#'   \item `value`: The maximum value of items that can be carried without exceeding the weight.
+#'   \item `elements`: A vector of indices representing the selected items.
+#' }
+#' @name brute_force_knapsack
+#' @examples
+#' knapsack_objects <- generate_knapsack_objects(8)
+#' brute_force_knapsack(knapsack_objects, W = 3500)
+#'
+#' @export
 RNGkind("Mersenne-Twister")  
 set.seed(42)
 

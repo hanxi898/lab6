@@ -1,3 +1,23 @@
+#' Greedy Knapsack Solver
+#'
+#' This function solves the knapsack problem using a greedy approach.
+#' It selects items based on the value-to-weight ratio and attempts to fit as many items 
+#' as possible without exceeding the weight limit.
+#'
+#' @param x A data frame with two columns: `w` for item weights and `v` for item values.
+#' @param W An integer representing the maximum weight capacity of the knapsack.
+#'
+#' @return A list with two components:
+#' \itemize{
+#'   \item `value`: The total value of the selected items.
+#'   \item `elements`: A vector of indices representing the selected items.
+#' }
+#' @name greedy_knapsack
+#' @examples
+#' knapsack_objects <- generate_knapsack_objects(10)
+#' greedy_knapsack(knapsack_objects, W = 3500)
+#'
+#' @export
 RNGkind("Mersenne-Twister")  
 set.seed(42)
 

@@ -1,0 +1,51 @@
+---
+title: "Knapsack Problem Solutions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Knapsack Problem Solutions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+# Knapsack Problem Solutions
+
+This vignette demonstrates how to solve the knapsack problem using three different approaches: 
+a greedy heuristic (`greedy_knapsack`), a brute-force search (`brute_force_knapsack`), 
+and a dynamic programming solution (`knapsack_dynamic`). 
+
+We will walk through each method, showing how they can be used with a sample dataset.
+
+## Setup
+
+First, load the package and create a sample dataset to work with.
+
+```{r setup}
+
+library(lab6)
+
+# Generate sample knapsack objects
+set.seed(42, kind = "Mersenne-Twister", normal.kind = "Inversion")
+
+# Generate a larger dataset for knapsack objects
+n <- 2000
+knapsack_objects <- data.frame(
+  w = sample(1:4000, size = n, replace = TRUE),  # Weights
+  v = runif(n = n, min = 0, max = 10000)         # Values
+)
+
+# Define the weight capacity of the knapsack
+W <- 3500
+
+# Run the greedy knapsack function
+result_greedy <- greedy_knapsack(x = knapsack_objects, W = W)
+print(result_greedy)
+
+# Run the brute-force knapsack function
+# (Use a small subset for demonstration to avoid long processing time)
+result_brute <- brute_force_knapsack(x = knapsack_objects[1:12, ], W = W)
+print(result_brute)
+
+# Run the dynamic knapsack function
+result_dynamic <- knapsack_dynamic(x = knapsack_objects[1:50, ], W = W)
+print(result_dynamic)
+
+

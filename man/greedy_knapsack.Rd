@@ -3,6 +3,9 @@
 \name{greedy_knapsack}
 \alias{greedy_knapsack}
 \title{Greedy Knapsack Solver}
+\usage{
+greedy_knapsack(x, W)
+}
 \arguments{
 \item{x}{A data frame with two columns: \code{w} for item weights and \code{v} for item values.}
 

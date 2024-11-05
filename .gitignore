@@ -6,3 +6,6 @@
 =======
 .*Rproj
 >>>>>>> 2fc257cf3c35c1fa65105070c136c14db8ffc336
+inst/doc
+/doc/
+/Meta/

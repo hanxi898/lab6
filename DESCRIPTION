@@ -7,6 +7,8 @@ Description: I like the package
 License: GPL-3
 Encoding: UTF-8
 Imports: testthat,future.apply,future
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Config/testthat/edition: 3

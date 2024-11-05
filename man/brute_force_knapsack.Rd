@@ -3,10 +3,15 @@
 \name{brute_force_knapsack}
 \alias{brute_force_knapsack}
 \title{Brute Force Knapsack Solver}
+\usage{
+brute_force_knapsack(x, W, parallel = TRUE)
+}
 \arguments{
 \item{x}{A data frame with two columns: \code{w} for item weights and \code{v} for item values.}
 
 \item{W}{An integer representing the maximum weight capacity of the knapsack.}
+
+\item{parallel}{Logical. If TRUE, enables parallel computation (default is FALSE).}
 }
 \value{
 A list with two components:
@@ -21,6 +26,13 @@ It checks all possible combinations of items and returns the one with the highes
 without exceeding the weight limit.
 }
 \examples{
+generate_knapsack_objects <- function(n) {
+knapsack_objects <- data.frame(
+w = sample(1:4000, size = n, replace = TRUE),
+v = runif(n = n, 0, 10000)
+)
+return(knapsack_objects)
+}
 knapsack_objects <- generate_knapsack_objects(8)
 brute_force_knapsack(knapsack_objects, W = 3500)
 

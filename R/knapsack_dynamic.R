@@ -17,16 +17,8 @@
 #' knapsack_dynamic(knapsack_objects, W = 3500)
 #' @name knapsack_dynamic
 #' @export
-RNGkind("Mersenne-Twister")  
-set.seed(42)
 
-generate_knapsack_objects <- function(n) {
-  knapsack_objects <- data.frame(
-    w = sample(1:4000, size = n, replace = TRUE),
-    v = runif(n = n, 0, 10000)
-  )
-  return(knapsack_objects)
-}
+
 
 knapsack_dynamic <- function(x, W) {
   n <- nrow(x)

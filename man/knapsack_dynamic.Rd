@@ -3,6 +3,9 @@
 \name{knapsack_dynamic}
 \alias{knapsack_dynamic}
 \title{Dynamic Programming Knapsack Solver}
+\usage{
+knapsack_dynamic(x, W)
+}
 \arguments{
 \item{x}{A data frame with two columns: \code{w} for item weights and \code{v} for item values.}
 

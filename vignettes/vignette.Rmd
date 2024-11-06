@@ -47,5 +47,5 @@ print(result_brute)
 # Run the dynamic knapsack function
 result_dynamic <- knapsack_dynamic(x = knapsack_objects[1:50, ], W = W)
 print(result_dynamic)
-
+```
 

@@ -46,11 +46,10 @@ greedy_knapsack <- function(x, W) {
     if (total_weight + x$w[i] <= W) {
       total_weight <- total_weight + x$w[i]
       total_value <- total_value + x$v[i]
-      selected_items <- c(selected_items, i)  
+      selected_items <- c(selected_items, as.integer(rownames(x)[i]))  
     }
   }
   
   
   return(list(value = total_value, elements = selected_items))
 }
-

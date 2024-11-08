@@ -47,6 +47,8 @@ greedy_knapsack <- function(x, W) {
       total_weight <- total_weight + x$w[i]
       total_value <- total_value + x$v[i]
       selected_items <- c(selected_items, as.integer(rownames(x)[i]))  
+    }else{
+      break
     }
   }
   
